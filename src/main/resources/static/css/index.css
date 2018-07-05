@@ -1,0 +1,90 @@
+body {
+    background-color: #9e9e9e33;
+}
+
+.mainDiv {
+    text-align: center;
+    border-bottom: 1px solid;
+    height: 50px;
+    line-height: 50px;
+    background-color: white;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px darkgrey;
+}
+
+.div {
+
+    display: inline-block;
+    height: 30px;
+    font-size: 14px;
+    font-family: unset;
+}
+
+.left {
+    width: 20%;
+    text-align: right;
+}
+.r {
+    width: 78%;
+    text-align: left;
+}
+
+.largeInput {
+    width: 95%;
+    border: 0px;
+}
+
+
+
+#connect-container {
+    float: left;
+    width: 400px
+}
+
+#connect-container div {
+    padding: 5px;
+}
+
+#console-container {
+    float: left;
+    margin-left: 15px;
+    width: 400px;
+}
+
+#console-container-users {
+    float: left;
+    margin-left: 40px;
+    width: 200px;
+}
+
+#console {
+    border: 1px solid #CCCCCC;
+    border-right-color: #33333333;
+    border-bottom-color: #999999;
+    height: 270px;
+    overflow-y: scroll;
+    padding: 5px;
+    width: 100%;
+}
+
+#users {
+    border: 1px solid #CCCCCC;
+    border-right-color: #33333333;
+    border-bottom-color: #999999;
+    height: 270px;
+    overflow-y: scroll;
+    padding: 5px;
+    width: 100%;
+}
+
+#console p {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 30px;
+    height: 30px;
+    border-radius: 99px;
+    margin: 0px 10px 0px 10px;
+}

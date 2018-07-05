@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 /**
  *
@@ -16,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping(value = "/home")
 public class HomeController {
 
-   static Logger logger = LoggerFactory.getLogger(HomeController.class);
+    static Logger logger = LoggerFactory.getLogger(HomeController.class);
 
     /**
      * @methdName: toHome
@@ -28,12 +30,17 @@ public class HomeController {
      * @version: V1.0
      */
     @RequestMapping(value = "/toHome", method = RequestMethod.GET)
-    public String toHome(@RequestParam(value = "uid") Long uid, Model model) {
-        logger.info("uid :" + uid);
-        model.addAttribute("uid",uid) ;
-        model.addAttribute("uid1",uid);
-        logger.info("123123");
+    public String toHome() {
         return "/view/index";
+    }
+
+    @RequestMapping(value = "/toSocket", method = RequestMethod.POST)
+    public ModelAndView toSocket(@RequestParam(value = "uid") Long uid, @RequestParam(value = "userName") String userName, Model model) {
+        model.addAttribute("uid", uid);
+        model.addAttribute("userName", userName);
+        logger.info("uid : " + uid + ", userName :" + userName );
+        ModelAndView  redirectView = new ModelAndView ("/view/socket");
+        return redirectView;
     }
 
     @RequestMapping(value = "", method = RequestMethod.GET)

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}">
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+
+
+<body>
+<noscript>
+    <h2 style="color:#ff0000">
+        你的浏览器不支持JavaScript 或者关闭了JavaScript， 请启用JavaScript,重新加载！
+    </h2>
+</noscript>
+<div>
+    <div id="connect-container">
+        欢迎你，[[${userName}]]！<input type="hidden" id="uid" th:value="${uid}">
+        <div>
+            <input type="text" id="toUid"  placeholder="用户ID">
+            <button id="connect" onclick="connect();">连接</button>
+            <button id="disconnect" disabled="disabled" onclick="disconnect();">关闭</button>
+        </div>
+        <div>
+            <textarea id="message" style="width:350px;height: 100px;" placeholder="请输入..."></textarea>
+        </div>
+        <div>
+            <button id="echo" onclick="echo(0);" disabled="disabled">发送消息</button>
+            <button id="echoall" onclick="echo(1);" disabled="disabled">群发消息</button>
+        </div>
+    </div>
+    <div id="console-container">
+        消息<p>
+        <div id="console"></div>
+    </div>
+    <div id="console-container-users">
+        用户列表
+        <div id="users"></div>
+    </div>
+</div>
+
+
+<script th:src="@{http://cdn.sockjs.org/sockjs-0.3.min.js}"></script>
+<script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/socket.js}" th:inline="javascript"></script>
+</body>
+</html>
