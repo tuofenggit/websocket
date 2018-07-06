@@ -140,6 +140,7 @@ function log(message) {
         for(var i = 0; i <messageData.userList.length;i++){
             var p = document.createElement('p');
             p.style.wordWrap = 'break-word';
+            p.style.fontSize = "12px";
             var str = "[ " + getNowFormatDate() + " ] "+messageData.userList[i]+"  ";
             p.appendChild(document.createTextNode(str));
             users.appendChild(p);
@@ -228,7 +229,7 @@ function createPElement(objet,messageData,type) {
      * 群发设置颜色
      */
     if(type == 3){
-        p.style.color="yellow";
+        p.style.color="#e9220b";
     }
 
     var str =messageData.message;

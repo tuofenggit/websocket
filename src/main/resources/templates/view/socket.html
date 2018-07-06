@@ -19,6 +19,11 @@
         欢迎你，[[${userName}]]！<input type="hidden" id="uid" th:value="${uid}">
         <div>
             <input type="text" id="toUid"  placeholder="用户ID">
+
+            <select  id="sendUid">
+                <option value="0">请选择</option>
+            </select>
+
             <button id="connect" onclick="connect();">连接</button>
             <button id="disconnect" disabled="disabled" onclick="disconnect();">关闭</button>
         </div>
@@ -31,7 +36,7 @@
         </div>
     </div>
     <div id="console-container">
-        消息<p>
+        消息
         <div id="console"></div>
     </div>
     <div id="console-container-users">

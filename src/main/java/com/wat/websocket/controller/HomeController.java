@@ -30,8 +30,9 @@ public class HomeController {
      * @version: V1.0
      */
     @RequestMapping(value = "/toHome", method = RequestMethod.GET)
-    public String toHome() {
-        return "/view/index";
+    public ModelAndView  toHome() {
+        ModelAndView view = new ModelAndView("/view/index");
+        return view;
     }
 
     @RequestMapping(value = "/toSocket", method = RequestMethod.POST)

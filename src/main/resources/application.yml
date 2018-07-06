@@ -2,7 +2,8 @@ server:
   port: 8181
 spring:
   thymeleaf:
-    prefix: classpath:/templates/
+    # 此处配置如果是 /templates/ 在controller中 返回页面时 只能是 xx/yy 不可以为 /xx/yy
+    prefix: classpath:/templates
     suffix: .html
     mode: HTML
     encoding: utf-8
