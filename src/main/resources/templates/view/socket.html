@@ -16,7 +16,7 @@
 </noscript>
 <div>
     <div id="connect-container">
-        欢迎你，[[${userName}]]！<input type="hidden" id="uid" th:value="${uid}">
+        欢迎你，[[${userName}]] ！<input type="hidden" id="uid" th:value="${uid}"> <input type="hidden" id="socketUrl" th:value="${socket}">
         <button id="zhuxiao"  onclick="zhuxiao();">注销</button>
         <div>
             请选择用户：

@@ -10,3 +10,18 @@ spring:
     servlet:
       content-type: text/html
     cache: false
+  profiles:
+    active: aliyun
+
+---
+
+spring:
+  profiles: dev
+socket:
+  url: localhost:8181
+
+---
+spring:
+  profiles: aliyun
+socket:
+  url: 47.75.53.40:8181

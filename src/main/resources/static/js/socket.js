@@ -18,11 +18,12 @@ function setConnected(connected) {
 
 function connect() {
     var uid = $("#uid").val();
+    var socketUrl = $("#socketUrl").val();
     console.log("uid :" + uid);
     if ('WebSocket' in window) {
-        webSocket = new WebSocket("ws://localhost:8181/websck?uid=" + uid);
+        webSocket = new WebSocket("ws://"+socketUrl+"/websck?uid=" + uid);
     } else {
-        webSocket = new SockJS("http://localhost:8181/sockjs/websck/info?uid=" + uid);
+        webSocket = new SockJS("http://"+socketUrl+"/sockjs/websck/info?uid=" + uid);
     }
     webSocket.onopen = function () {
     };
