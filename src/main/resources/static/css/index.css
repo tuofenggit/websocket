@@ -1,7 +1,6 @@
 body {
     background-color: #9e9e9e33;
 }
-
 .mainDiv {
     text-align: center;
     border-bottom: 1px solid;
@@ -67,6 +66,23 @@ body {
     width: 100%;
 }
 
+#console p {
+    padding: 0;
+    margin-bottom: 4px;
+}
+.main_p{ animation: change 1s  ease-in  infinite ;text-align: center; color:#00ff21f0; font-weight: bold}
+@keyframes change {
+    0%{ text-shadow: 0 0 4px green}
+    50%{ text-shadow: 0 0 40px green}
+    100%{ text-shadow: 0 0 4px green}
+}
+
+.toPeer {
+    font-size: 12px;
+    text-align: center;
+
+}
+
 #users {
     border: 1px solid #CCCCCC;
     border-right-color: #33333333;
@@ -75,11 +91,6 @@ body {
     overflow-y: scroll;
     padding: 5px;
     width: 100%;
-}
-
-#console p {
-    padding: 0;
-    margin-bottom: 4px;
 }
 
 img {

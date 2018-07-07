@@ -10,7 +10,7 @@
 
 <body>
 
-<form action="#" th:action="@{/home/toSocket}" th:method="post">
+<form action="#" th:action="@{/home/toSocket}" th:method="post"  onsubmit="return check()" >
 <div class="mainDiv">
     <div class="div left">用户ID :</div>
     <div class="div right"><input class="largeInput" th:name="uid" type="text" placeholder="用户uid" id="uid"/></div>
@@ -22,9 +22,10 @@
 </div>
 
 <div class="mainDiv">
-     <button type="submit"  >去聊天</button>
+     <button type="submit" >去聊天</button>
 </div>
 </form>
 <script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/index.js}" th:inline="javascript"></script>
 </body>
 </html>

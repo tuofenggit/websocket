@@ -17,15 +17,15 @@
 <div>
     <div id="connect-container">
         欢迎你，[[${userName}]]！<input type="hidden" id="uid" th:value="${uid}">
+        <button id="zhuxiao"  onclick="zhuxiao();">注销</button>
         <div>
-            <input type="text" id="toUid"  placeholder="用户ID">
-
+            请选择用户：
             <select  id="sendUid">
-                <option value="0">请选择</option>
+                <option value="-1">请选择</option>
             </select>
 
-            <button id="connect" onclick="connect();">连接</button>
-            <button id="disconnect" disabled="disabled" onclick="disconnect();">关闭</button>
+            <button id="connect" onclick="p2pConnect();">勾搭</button>
+            <button id="disconnect" disabled="disabled" onclick="disconnect();">再见</button>
         </div>
         <div>
             <textarea id="message" style="width:350px;height: 100px;" placeholder="请输入..."></textarea>
