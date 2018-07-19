@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 @RequestMapping("/")
-public class indexController {
+public class IndexController {
 
     /**
      * 默认页面
@@ -16,6 +16,6 @@ public class indexController {
      */
     @RequestMapping("")
     public String toIndexHtml(){
-        return "/view/index";
+        return "/view/home";
     }
 }

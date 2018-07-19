@@ -1,0 +1,23 @@
+body {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Hiragino Sans GB', 'Heiti SC', 'WenQuanYi Micro Hei', 'Arial', 'sans-serif' !important;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
+    background-color: #fff;
+    margin: 0;
+}
+
+@media screen and (min-width: 1366px) {
+    .header-bg{
+        height: 30rem;
+    }
+}
+
+.header-bg {
+    position: relative;
+    padding-top: 5rem;
+    width: 100%;
+    background: url("/static/images/banner.jpg");
+    background-size: 100% 100%;
+    overflow: hidden;
+}
