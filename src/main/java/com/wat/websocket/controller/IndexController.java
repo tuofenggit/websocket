@@ -16,6 +16,6 @@ public class IndexController {
      */
     @RequestMapping("")
     public String toIndexHtml(){
-        return "/view/home";
+        return "/view/index";
     }
 }

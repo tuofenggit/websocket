@@ -2,8 +2,8 @@ package com.wat.websocket.config;
 
 import com.alibaba.fastjson.JSONObject;
 import com.wat.websocket.utils.WebSocketUtil;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.*;
 
@@ -12,7 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 
 /**
- * @Auther: chuangwang8
+ * @Author: chuangwang8
  * @Date: 2018-07-04 14:13
  * @Description:
  */
@@ -20,7 +20,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @Component
 public class MyWebSocketHandler implements WebSocketHandler {
 
-    private static Log logger = LogFactory.getLog(MyWebSocketHandler.class);
+    Logger logger = LogManager.getLogger();
 
     public static final Map<Long, Set<WebSocketSession>> userSocketSessionMap;
 

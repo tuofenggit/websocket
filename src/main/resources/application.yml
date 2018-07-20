@@ -12,6 +12,8 @@ spring:
     cache: false
   profiles:
     active: aliyun
+logging:
+  config: classpath:log4j2.xml
 
 ---
 

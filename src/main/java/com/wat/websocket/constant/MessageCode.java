@@ -1,7 +1,7 @@
 package com.wat.websocket.constant;
 
 /**
- * @Auther: chuangwang8
+ * @Author: chuangwang8
  * @Date: 2018-07-05 11:19
  * @Description: socket 状态码
  */

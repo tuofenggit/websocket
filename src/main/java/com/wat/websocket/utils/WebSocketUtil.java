@@ -3,8 +3,8 @@ package com.wat.websocket.utils;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.wat.websocket.constant.MessageCode;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketMessage;
 import org.springframework.web.socket.WebSocketSession;
@@ -18,14 +18,12 @@ import java.util.Set;
 import static com.wat.websocket.constant.MessageCode.*;
 
 /**
- * @Auther: chuangwang8
+ * @Author: chuangwang8
  * @Date: 2018-07-05 14:28
  * @Description: socket util
  */
 public class WebSocketUtil {
-
-
-    private static Log logger = LogFactory.getLog(WebSocketUtil.class);
+    static Logger logger = LogManager.getLogger();
 
     /**
      * @methdName: sendSocketMessage

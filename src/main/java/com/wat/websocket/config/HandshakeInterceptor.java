@@ -1,7 +1,7 @@
 package com.wat.websocket.config;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.http.server.ServerHttpRequest;
 import org.springframework.http.server.ServerHttpResponse;
 import org.springframework.http.server.ServletServerHttpRequest;
@@ -13,15 +13,13 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
 /**
- * @Auther: chuangwang8
+ * @Author: chuangwang8
  * @Date: 2018-07-04 14:09
  * @Description:
  */
 @Component
 public class HandshakeInterceptor extends HttpSessionHandshakeInterceptor {
-
-    private static Log logger = LogFactory.getLog(HandshakeInterceptor.class);
-
+    Logger logger = LogManager.getLogger();
     @Override
     public boolean beforeHandshake(ServerHttpRequest request,
                                    ServerHttpResponse response, WebSocketHandler wsHandler,
